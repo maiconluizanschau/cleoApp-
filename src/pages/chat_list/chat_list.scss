@@ -1,0 +1,86 @@
+page-chat_list {
+    appearance-animation-layout-2 {
+        .fade-in-right-item {
+            -webkit-animation: fadeInRight 800ms;
+            -moz-animation: fadeInRight 800ms;
+            -o-animation: fadeInRight 800ms;
+            animation: fadeInRight 800ms;
+        }
+    }
+
+    .avatar {
+        filter: blur(2px);
+    }
+
+
+        //titulo+logo
+/*ion-title {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0 90px 1px;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+  } */
+  //cor header botao
+.toolbar-background {
+	background-color:#f8c300;
+  }
+  
+   //imagem redonda
+   .item-md,.item-ios {
+    padding-left:0px;
+    //border-radius: 04%;
+    background:#f9f5e3;
+   
+    ion-avatar img {
+        width:60px;
+        height:60px;
+       // margin:20px;
+      // border-radius: 50%;
+              overflow: hidden;
+              box-shadow: 0.6px 0.6px 7px #AB09AA; 
+              /* sombra deslocada em 3px para baixo e 3px para direita, borrada em 5px e com cor cinza */
+              background-size: cover; 
+              /*ajusta a imagem dentro do div, mantendo a proporção da imagem */
+    }
+
+    ion-avatar[item-start]{
+        margin: 0px 30px 8px 0;
+        
+    }
+  ///caso for colocar um contador de msg nao lidas 
+    .number-circle{
+        color:white;
+        font-weight: 700;
+        border-radius: 50%;
+        background-color:red;
+        width: 20px;height:20px;
+        line-height: 20px;
+        text-align: center;
+        
+    }
+}
+
+.rating {
+  ion-icon {
+      font-size: 15px;
+      padding: 0px 1px !important;
+      background: none;
+      color:color($colors,primary);
+  }
+}
+
+ //fundo 
+ .content{
+    background:#f9f5e3;
+}
+
+#novoMatchAviso {
+    text-align: center;
+    font-size: 30px;
+    font-family: Snell Roundhand, cursive;
+    font-style: italic;
+  } 
+}

@@ -1,0 +1,125 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Configurações</ion-title>
+        <ion-buttons end>
+            <button ion-button clear icon-end icon-only (click)="otherShare()">
+                <ion-icon name="md-person-add" full color="light"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content no-padding>
+
+    <ion-card full color="fundo">
+        <ion-card-header> Você deseja FLERTAR ou SER FLERTADO(A)?</ion-card-header>
+        <ion-card-content>
+            <ion-item ion-item no-lines item-title item-bcg submenu text-left color="fundo">
+                <ion-toggle [(ngModel)]="toggleStatusAtivo" (ionChange)="Change_Toggle_AtivoPasssivo(toggleStatusAtivo);" checked="false"></ion-toggle>
+                <ion-label>
+                    Ser Buscado/Buscar
+                    <a (click)="info(1)">
+                        <ion-icon name="md-information-circle"></ion-icon>
+                    </a>
+                </ion-label>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card *ngIf="toggleStatusAtivo" color="fundo">
+        <ion-card-header>
+            <ion-label>
+                Quem você deseja buscar?
+                <a (click)="info(2)">
+                    <ion-icon name="md-information-circle"></ion-icon>
+                </a>
+            </ion-label>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-item ion-item no-lines item-title item-bcg submenu text-left color="fundo">
+                <ion-toggle [(ngModel)]="toggleStatusH" (ionChange)="Change_Toggle_Homens(toggleStatusH);"></ion-toggle>
+                <ion-label>
+                    Homens
+                </ion-label>
+            </ion-item>
+            <ion-item *ngIf="!btnMulher" ion-item no-lines item-title item-bcg submenu text-left  color="fundo">
+                <ion-toggle [disabled]="btnMulher" [(ngModel)]="toggleStatusM" (ionChange)="Change_Toggle_Mulheres(toggleStatusM);"></ion-toggle>
+                <ion-label>
+                    Mulheres
+                </ion-label>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+    <ion-card *ngIf="!toggleStatusAtivo" color="fundo">
+        <ion-card-header>
+            <ion-label>
+                Por quem você deseja ser buscado?
+                <a (click)="info(2)">
+                    <ion-icon name="md-information-circle"></ion-icon>
+                </a>
+            </ion-label>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-item ion-item no-lines item-title item-bcg submenu text-left color="fundo">
+                <ion-toggle [(ngModel)]="toggleStatusHBuscado" (ionChange)="Change_Toggle_Homens_Buscado(toggleStatusHBuscado);"></ion-toggle>
+                <ion-label>
+                    Homens
+                </ion-label>
+            </ion-item>
+            <ion-item ion-item no-lines item-title item-bcg submenu text-left color="fundo">
+                <ion-toggle [(ngModel)]="toggleStatusMBuscado" (ionChange)="Change_Toggle_Mulheres_Buscado(toggleStatusMBuscado);"></ion-toggle>
+                <ion-label>
+                    Mulheres
+                </ion-label>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+    <ion-card color="fundo">
+        <ion-card-header > Faixa Etária?
+        </ion-card-header>
+        <ion-card-content>
+            <ion-range dualKnobs="true" (ionChange)="faixa(rangeObject)" [(ngModel)]="rangeObject" color="#f9f5e3" min="18" max="60"
+                debounce="40" >
+                <ion-label range-left>18</ion-label>
+                <ion-label range-right>60</ion-label>
+            </ion-range>
+            <ion-label>
+                <ion-item ion-item no-padding item-title item-bcg submenu color="fundo" text-center>
+                    <ion-badge color="secondary">{{rangeObject.lower}}</ion-badge>
+                    <ion-badge color="secondary">{{rangeObject.upper}}</ion-badge>
+                </ion-item>
+            </ion-label>
+        </ion-card-content>
+    </ion-card>
+    <ion-list>
+
+        <ion-item ion-item no-padding item-title item-bcg submenu text-center color="fundo">
+            <a item-title href="https://cleoapp.com.br/suporte.html">Ajuda e Suporte</a>
+        </ion-item>
+        <ion-item ion-item no-padding item-title item-bcg submenu text-center color="fundo">
+            <a item-title href="https://cleoapp.com.br/politicas-de-privacidade.html#">Políticas de Privacidade</a>
+        </ion-item>
+        <ion-item ion-item no-padding item-bcg submenu text-center color="fundo">
+            <a item-title href="https://cleoapp.com.br/termos-de-uso.html">Termos de Uso</a>
+        </ion-item>
+
+        <br>
+        <ion-item ion-item no-lines item-title item-bcg text-center color="fundo">
+            <button ion-button clear color="light" ion-button (click)="logout()">Sair
+                <ion-icon name="exit"></ion-icon>
+            </button>
+        </ion-item>
+        <ion-item ion-item no-lines item-title item-bcg text-center color="fundo">
+            <button ion-button color="danger" clear style="opacity: 0.50;" (click)="deleteConta()">Deletar Conta
+                <ion-icon name="trash"></ion-icon>
+            </button>
+        </ion-item>
+        <ion-item-divider color="fundo"></ion-item-divider>
+        <ion-item ion-item no-lines item-title item-bcg text-center color="fundo">
+            <button ion-button clear (click)="problema()">Informar problema
+                <ion-icon name="alert"></ion-icon>
+            </button>
+        </ion-item>
+
+    </ion-list>
+</ion-content>

@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+      <ion-title>
+          <img alt="Cleo aplicativo de relacionamento" height="40" src="assets/images/logo.png">
+      </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="login-content" padding>
+
+  <ion-row class="top-row">
+    <ion-col>
+      <h6 class="label-logo">Antes de entrar saiba que:</h6>
+      <p class="label-description">ao prosseguir, você concorda com todos os<a href="#"> termos de uso </a>e <a href="#">nossa politica de privacidade</a>.</p>
+  
+    </ion-col>
+  </ion-row>
+  <ion-row class="bottom-row">
+    <ion-col class="login-button">
+      <!--
+      <button ion-button block (click)="loginNav()"><ion-icon name="logo-facebook"></ion-icon> Login com Facebook</button>
+      -->
+      <button ion-button block (click)="loginFacebook()"><ion-icon name="logo-facebook"></ion-icon> Login com Facebook</button>
+      <button ion-button block (click)="loginNav()"><ion-icon name="logo-facebook"></ion-icon> Login Navegador</button>
+      
+    </ion-col>
+  </ion-row>
+  <p class="label-info">*CLEO nunca irá publicar nada em suas mídias sociais*</p>
+</ion-content>

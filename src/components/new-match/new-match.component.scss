@@ -1,0 +1,162 @@
+new-match {
+
+
+        //front nova cores template
+        
+        //titulo+logo
+    ion-title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0 90px 1px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+      }
+      //cor header botao
+    .toolbar-background {
+        background-color:#f8c300;
+      }
+    
+      .content{
+        background:#AB09AA;
+    }
+      
+      //antigo
+        .heart {
+            animation: pulse 1s infinite alternate;
+           // background:#f8c300;
+           
+        }
+    
+    
+    
+    
+        @keyframes pulse {
+            
+            0% {
+                transform: scale(0.9);
+            }
+    
+            100% {
+                transform: scale(1.1);
+            }
+            
+        }
+    
+        .flert ion-badge {
+            text-align: center;
+            position: absolute;
+            bottom: 40%;
+            font-size: 4.5em;
+            width: 100%;
+            font-weight: bold;
+            color: #fff;
+            
+        }
+    
+        .textFlert p {
+            font-size: 4.5em;
+            color: #fff;
+            position: absolute;
+            width: 100%;
+            top: 20%;
+            text-align: center;
+            animation: pulse 1s infinite alternate;
+        }
+    
+        .vizualizacao p {
+            font-size: 1.5em;
+            color: #fff;
+            position: absolute;
+            width: 100%;
+            top: 40%;
+            text-align: center;
+            animation: pulse 1s infinite alternate;
+        }
+    
+        .btnPulse {
+            text-align: center;
+            height: 60%;
+            
+            
+        }
+    
+        .imgcoracao {
+            text-align: center;
+            width: 100%;
+            
+        }
+    
+        ion-card {
+            position: relative;
+            display: block;
+        }
+    
+        ion-card.td-card {
+            border: 1px solid #AB09AA;
+            box-shadow: 0px 1px 3px #AB09AA;
+            border-radius: 40px;
+            width: 95%;
+            height: 80vh;
+            position: absolute;
+            background:#AB09AA;
+        }
+    
+        ion-card {
+            border-radius: 50%;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+    
+        /*PARTE DO LIKES E DESLIKE*/
+    .card-background-page {
+    
+      ion-card {
+        position: relative;
+        text-align: center;
+      }
+    
+      .card-title {
+        position: absolute;
+        top: 36%;
+        font-size: 2.0em;
+        width: 100%;
+        font-weight: bold;
+        color: #fff;
+      }
+    
+      .card-subtitle {
+        font-size: 1.0em;
+        position: absolute;
+        top: 52%;
+        width: 100%;
+        color: #fff;
+      }
+    
+    }
+          
+    #profile-image {
+        display: block;
+        border-radius: 100%;
+        width: auto;
+        height: 150px;
+        margin: 0 auto 0;
+        //box-shadow: 0px 11px 20px -3px rgba(142, 136, 146, 0.75);
+        overflow: hidden;
+        box-shadow: 0.6px 0.6px 7px #AB09AA; 
+        /* sombra deslocada em 3px para baixo e 3px para direita, borrada em 5px e com cor cinza */
+        background-size: cover; 
+        /*ajusta a imagem dentro do div, mantendo a proporção da imagem */
+    }
+    #novoMatchAviso {
+        text-align: center;
+        font-size: 40px;
+        font-family: Snell Roundhand, cursive;
+        font-style: italic;
+    }   
+    #novoMatchMensagem {
+        font-size: 13px;
+        font-family: sans-serif;
+    }
+}

@@ -1,0 +1,44 @@
+<ion-header> 
+  <ion-navbar>
+      <ion-buttons left>
+          <button ion-button icon-only (click)="changePicture()"  large color="light">
+            <ion-icon name="camera"></ion-icon>
+          </button>
+      </ion-buttons>   
+  <ion-title>
+      <img alt="Cleo aplicativo de relacionamento" height="40" src="assets/images/logo.png">
+  </ion-title>
+      <ion-buttons right>
+        <button ion-button icon-only (click)="onConfig()" large color="light"><ion-icon name="settings" ></ion-icon></button>
+      </ion-buttons>
+</ion-navbar>
+</ion-header>
+<!--perfil-->
+<ion-content *ngIf="currentUser">
+<div id="content">
+<div id="profile-info" padding>
+  <!--link perfil imagem-->
+  <img id="profile-image" [src]="currentUser.photo || 'assets/images/no-photo.png'">
+  <h3 id="profile-name">{{currentUser.name}}&nbsp;{{currentUser.sobrenome}},&nbsp;{{currentUser.idade}}</h3>
+  
+  <ion-item color="fundo">
+    <p class="profile-description" *ngIf="!canEditSobre" name='md-create' (click)="canEditSobre = !canEditSobre" item-start>{{currentUser.sobre}}</p>
+    <ion-icon *ngIf="!canEditSobre" name='md-create' (click)="canEditSobre = !canEditSobre" item-start></ion-icon>
+    <!--<p class="descricao" *ngIf="!canEditSobre">{{currentUser.sobre}}</p>-->
+    <form (ngSubmit)="onSubmit(currentUser.sobre)" *ngIf="canEditSobre" #profileForm="ngForm">
+      <ion-item color="fundo">
+        <ion-textarea rows="4" name="sobre" [(ngModel)]="currentUser.sobre" required minlenght="1" autosize ></ion-textarea>
+      </ion-item>
+      <button full ion-button default-button type="submit" [disabled]="profileForm.form.invalid">
+        <ion-icon name="md-checkmark"></ion-icon>
+      </button>
+    </form>
+  </ion-item>
+  <p>{{currentUser.genero}}</p>
+  <p>{{currentUser.local}}</p>
+  
+</div>
+</div>
+
+
+</ion-content>

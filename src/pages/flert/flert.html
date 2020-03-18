@@ -1,0 +1,97 @@
+<!--Fist Screen-->
+<!--
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            <img alt="Cleo aplicativo de relacionamento" height="40" src="assets/images/logo.png">
+        </ion-title>
+    </ion-navbar>
+  </ion-header>
+<ion-content>
+
+    <div background-size class="default-background">
+        <ion-list *ngFor="let card of userList ; let i = index; " no-lines>
+            <ion-item-sliding #item>
+                <ion-item>
+                    <ion-avatar item-left>
+                        <img *ngIf="card.photo" [src]="card.photo">
+                    </ion-avatar>
+                    <h2>{{ card.name }} {{ card.sobrenome }} &middot; {{ card.idade }}</h2>
+                </ion-item>
+                <ion-item-options>
+                    <button color="danger" large clear ion-button (click)="desfazerFleat(i, card)">
+                        <ion-icon name="trash"></ion-icon>
+                    </button>
+                    <button color="favorite" large clear ion-button (click)="abrirPerfil(card)">
+                        <ion-icon name="eye"></ion-icon>
+                    </button>
+                    <button color="roxo"  large clear item-end ion-button (click)="openChat(card)">
+                        <ion-icon name="ios-chatbubbles"></ion-icon>
+                    </button>
+                </ion-item-options>
+            </ion-item-sliding>
+        </ion-list>
+    </div>
+
+
+
+</ion-content>
+-->
+<ion-header>
+    <ion-navbar>
+        <ion-buttons left>
+                <button ion-button icon-only  (click)="onConfig()" large color="light">
+                    <ion-icon name="settings"></ion-icon>
+                </button>
+        </ion-buttons>
+        <ion-title>
+            <img alt="Cleo aplicativo de relacionamento" height="40" src="assets/images/logo.png">
+        </ion-title>
+   
+        <ion-buttons right>
+            <button ion-button icon-only (click)="chat()" large color="light"><ion-icon name="ios-chatbubbles" ></ion-icon></button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list *ngFor="let card of userList ; let i = index; " no-lines>
+        <ion-item-sliding #item>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img *ngIf="card.photo" [src]="card.photo">
+                </ion-avatar>                      
+                <h2>{{ card.name }} {{ card.sobrenome }} &middot; {{ card.idade }}</h2>
+            </ion-item>      
+            <ion-item-options>
+                <button color="danger" large clear ion-button (click)="desfazerFleat(i, card)">
+                    <ion-icon name="trash"></ion-icon>
+                </button>
+                <button color="favorite" large clear ion-button (click)="abrirPerfil(card)">
+                    <ion-icon name="eye"></ion-icon>
+                </button>
+                <button color="roxo"  large clear item-end ion-button (click)="openChat(card)">
+                    <ion-icon name="ios-chatbubbles"></ion-icon>
+                </button>
+            </ion-item-options>    
+        </ion-item-sliding>
+    </ion-list>
+    <div *ngIf="userList.length < 1">
+        <div class="row"> 
+            <ion-col col-1></ion-col>
+            <ion-col col-10>
+                <ion-item >
+                    <img width="300"  src="assets/cleofundo.png" >   
+                </ion-item>
+                <ion-card-title  id="novoMatchAviso">
+                    Nenhum Match! 
+                </ion-card-title>
+            </ion-col>
+        </div>
+        <!-- Animação -->
+        <!--<lottie-animation-view [options]="lottieConfig" [width]="500" [height]="500"> 
+
+        </lottie-animation-view> -->
+    </div>
+
+</ion-content>

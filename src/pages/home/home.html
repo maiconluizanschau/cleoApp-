@@ -1,0 +1,46 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            <img alt="Cleo aplicativo de relacionamento" height="40" src="assets/images/logo.png">
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+
+    <div *ngIf="flerts && !new_match">
+        <ion-card class="td-card" color="fundo">
+            <ion-row>
+                <div class="heart">
+                    <img class="imgcoracao" src="assets/images/coracao.png">
+                </div>
+                <div class="textFlert">
+                    <p>{{ like }} Gostei</p>
+                </div>
+                <div class="vizualizacao">
+                    <p>{{ view }} Views</p>
+                </div>
+            </ion-row>
+        </ion-card>
+    </div>
+    <div *ngIf="!flerts && !new_match">
+        <flash-card *ngIf="!acabou" [user]="user"></flash-card>
+        <ion-item id="fundo"  *ngIf="acabou" >
+            <div class="row"> 
+                <ion-col col-1></ion-col>
+                <ion-col col-10>
+                    <!--<ion-item >
+                        <img width="300"  src="assets/cleofundo.png" >   
+                    </ion-item> -->
+                            <!-- Animação -->
+                    <lottie-animation-view [options]="lottieConfig" [width]="300" [height]="300"> 
+                    </lottie-animation-view>
+                    <ion-card-title  id="novoMatchAviso">
+                        Procurando! 
+                    </ion-card-title>
+                </ion-col>
+            </div>
+        </ion-item>
+    </div>
+    <!-- Abaixo component com tela de novo Match-->
+    <new-match *ngIf="new_match" [userLogado]="userLogado" [userMatch]="userMatch" ></new-match>
+</ion-content>

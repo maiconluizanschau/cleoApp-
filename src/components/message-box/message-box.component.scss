@@ -1,0 +1,29 @@
+message-box {
+
+    display: flex;
+    margin-bottom: 10px;
+    
+
+    .text {
+        border-radius: 10px;
+        background-color: #efefef;
+        padding: 7px 5px;
+        box-shadow: 1px 1px 3px #ccc;
+        color: #333;
+        p {
+            font-size: 1.1em;
+            margin: 0;
+        }
+        p.timestamp {
+            font-size: 0.5em;
+            margin-top: 5px;
+            color: #999;
+        }
+    }
+
+    .sender-background {
+        border-radius: 10px;
+        background-color: rgba(237, 250, 123, 0.69);
+    }
+
+}

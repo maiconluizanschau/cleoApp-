@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "407449858691",
+    "firebase_url": "https://startup-cleo-6ab96.firebaseio.com",
+    "project_id": "startup-cleo-6ab96",
+    "storage_bucket": "startup-cleo-6ab96.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:407449858691:android:113c7ca906faafd7",
+        "android_client_info": {
+          "package_name": "br.com.cleoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "407449858691-7bu17buf6sjhm89teagpb1pcmditpi3q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4IO4hyya89F7IoWlbxYXs0Ihp0Ff0aEQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

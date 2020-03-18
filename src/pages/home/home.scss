@@ -1,0 +1,171 @@
+page-home {
+
+
+    //front nova cores template
+    
+    //titulo+logo
+ion-title {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0 90px 1px;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+  }
+  //cor header botao
+.toolbar-background {
+	background-color:#f8c300;
+  }
+
+
+  //roxo
+  //.content{
+    //background:#AB09AA;
+//}
+.content{
+    background:#f9f5e3;
+}
+#fundo{
+    background:#f9f5e3;
+    color: #f9f5e3;
+}  
+  //antigo
+    .heart {
+        animation: pulse 1s infinite alternate;
+       // background:#f8c300;
+       
+    }
+
+    @keyframes pulse {
+        
+        0% {
+            transform: scale(0.9);
+        }
+
+        100% {
+            transform: scale(1.1);
+        }
+        
+    }
+
+    .flert ion-badge {
+        text-align: center;
+        position: absolute;
+        bottom: 40%;
+        font-size: 4.5em;
+        width: 100%;
+        font-weight: bold;
+        color: #fff;
+        
+    }
+
+    .textFlert p {
+        font-size: 4.5em;
+        color: #fff;
+        position: absolute;
+        width: 100%;
+        top: 20%;
+        text-align: center;
+        animation: pulse 1s infinite alternate;
+    }
+
+    .vizualizacao p {
+        font-size: 1.5em;
+        color: #fff;
+        position: absolute;
+        width: 100%;
+        top: 40%;
+        text-align: center;
+        animation: pulse 1s infinite alternate;
+    }
+
+    .btnPulse {
+        text-align: center;
+        height: 60%;
+
+        
+    }
+
+    .imgcoracao {
+        text-align: center;
+        width: 100%;
+        
+    }
+
+    ion-card {
+        position: relative;
+        display: block;
+    }
+
+    ion-card.td-card {
+        border: 1px solid #f9f5e3;
+        box-shadow: 0px 1px 3px #f9f5e3;
+        border-radius: 40px;
+        width: 95%;
+        height: 80vh;
+        position: absolute;
+        background:#f9f5e3;
+    }
+
+    ion-card {
+        border-radius: 50%;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    /*PARTE DO LIKES E DESLIKE*/
+//animacao da tela de abertura
+#custom-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100000;
+    width:100%;
+    background-color: #f8c300;
+  }
+  
+  .flb {
+    background-color: #f9f5e3;
+    height:100%;
+    width:100%;
+    animation: pulse 1s linear forwards;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .Aligner-item {
+    max-width: 50%;
+  }
+  .Aligner-item--top {
+    align-self: flex-start;
+  }
+  .Aligner-item--bottom {
+    align-self: flex-end;
+  }
+  #custom-overlay img {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    height: auto;
+    animation: animation 3100ms linear infinite both;
+    animation-delay: 1s;
+  }
+  @keyframes pulse {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+
+  #novoMatchAviso {
+    text-align: center;
+    font-size: 35px;
+    font-family: Snell Roundhand, cursive;
+    font-style: italic;
+  }     
+}

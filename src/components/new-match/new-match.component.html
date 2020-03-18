@@ -1,0 +1,41 @@
+<ion-content class="cards-bg">
+  <ion-card no-padding>
+      <br><br>
+      <ion-row >
+          <ion-col>
+            <img id="profile-image" [src]="(userLogado)?.photo">
+          </ion-col>
+          <ion-col text-right>
+            <img id="profile-image" [src]="(userMatch)?.photo">   
+          </ion-col>
+      </ion-row>
+      
+      
+    <ion-card-content>
+      <ion-card-title  id="novoMatchAviso">
+        Um novo Match! 
+      </ion-card-title>
+      <p id="novoMatchMensagem">
+        Parabéns! Você e {{userMatch.name}} podem conversar agora.
+      </p>
+    </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="danger" icon-start (click)="home()">
+          <ion-icon name='md-albums'></ion-icon>
+          Ver outros
+        </button>
+      </ion-col>
+
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-start (click)="chat(userMatch)">
+          <ion-icon name='ios-chatbubbles'></ion-icon>
+          Conversar
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+
+</ion-content>

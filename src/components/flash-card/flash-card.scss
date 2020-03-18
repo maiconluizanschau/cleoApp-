@@ -1,0 +1,160 @@
+flash-card {
+  
+  ion-card {
+    display: block;
+ 
+  }
+ 
+
+ion-card.td-card {
+    border: 1px solid #999;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+    //border-radius: 40px;
+    //width: 95%;
+    height: 80vh;
+    position: absolute;
+ 
+  }
+
+ion-card img {
+height: 250px;
+background-position: center center;
+background-size: cover;
+ 
+  }
+ 
+  .fade {
+    -webkit-transition: 0.2s opacity linear;
+    transition: 0.2s opacity linear;
+    opacity: 0;
+ 
+  }
+ 
+  .vote {
+    width: 65%;
+    margin: auto;
+    }
+
+  .rate {
+    width: 80px;
+    height: 80px;
+    border-radius: 70px;
+    background: #FFF;
+    border: 5px solid #f0f0f0;
+    float: left;
+    box-shadow: 1px 1px 1px 0px #e9e9e9;
+ 
+  }
+ 
+  .rate:nth-child(1) {
+    margin-left: 4px;
+   // background: url(http://web.arjentienkamp.com/codepen/tinder/delete.png);
+    background: url(../assets/images/escolha/flertnow.png);
+    background-size: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+ 
+  }
+ 
+.rate:nth-child(3) {
+    margin-left: -4px;
+    //background: url(http://web.arjentienkamp.com/codepen/tinder/heart.png);
+    background: url(../assets/images/escolha/flert.png);
+    background-size:50px;
+    background-position: center;
+    background-repeat: no-repeat;
+ 
+  }
+ 
+.info {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background: #FFF;
+    border: 5px solid #f0f0f0;
+    float: left;
+
+    box-shadow: 1px 1px 1px 0px #e9e9e9;
+    margin-top: 14px;
+    margin-left: -4px;
+    background: url(http://web.arjentienkamp.com/codepen/tinder/info.png);
+    background-size: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+   }
+   .card-stack .stack, .card-stack .stack ion-card {
+    width: 400px;
+    max-width: 95%;
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+.card-stack .stack .stack-buttons {
+    position: absolute;
+    display: flex;
+    top: 390px;
+    left: 30%;
+    right: 30%;
+}
+
+.card-stack .stack .stack-buttons button {
+    flex: 1;
+}
+.verified {
+  color: #2A8CFA;
+  margin-left: 5px;
+  font-size: 24px;
+}
+
+.name {
+  display: inline-block;
+  margin-bottom: 0px;
+}
+
+.breed {
+  margin: 5px 0px 0px 0px;
+  color: #B1B1B1;
+}
+
+.age {
+  font-weight: 400;
+}
+
+card-stack {
+  display: block;
+  height: 100%;
+}
+
+tinder-card {
+  display: block;
+}
+
+.card-image {
+  height: 250px;
+  background-position: center center;
+  background-size: cover;
+}
+
+.stacked {
+  background-color: #FFF;
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  left: calc(50% - 175px);
+  top: 100px;
+
+  border: 1px solid #999;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+}
+}

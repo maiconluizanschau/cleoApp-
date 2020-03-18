@@ -1,0 +1,123 @@
+<ion-content class="tutorial-page">
+  <ion-slides pager>
+    <ion-slide>
+      <ion-toolbar>
+        <ion-title text-center>
+          <img src="../assets/images/logo/login.png">
+        </ion-title>
+      </ion-toolbar>
+      <img [src]="" class="slide-image" />
+      <h2 class="slide-title">Prazer, CLEO</h2>
+      <br>
+      <p class="slide-text">
+        Pensando nas alarmantes desigualdades de gênero encontramos em nossa sociedade, esta rede se preocupa exclusivamente em oferecer
+        uma experiencia segura e confortável para as mulheres.
+      </p>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-toolbar>
+        <ion-title text-center>
+          <img src="../assets/images/logo/login.png">
+        </ion-title>
+      </ion-toolbar>
+      <img [src]="" class="slide-image" />
+      <h2 class="slide-title">Prazer, CLEO</h2>
+      <br>
+      <p class="slide-text">
+        As mulheres decidem
+        <b>quando</b> e
+        <b>para quem</b> se revelar. A iniciativa no app pode ser ativa ou passiva. Dessa forma, você escolhe
+        <b>conhecer</b> pessoas ou
+        <b>ser conhecida</b>. As interações aqui
+        <b>não permitem</b>
+        que homens visualizem fotos ou outras informações, a não ser que a
+        <b>mulher libere</b> estas opções.
+      </p>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-toolbar>
+        <ion-title text-center>
+          <img src="../assets/images/logo/login.png">
+        </ion-title>
+      </ion-toolbar>
+      <img [src]="" class="slide-image" />
+      <h2 class="slide-title">Prazer, CLEO</h2>
+      <br>
+      <p class="slide-text">Nosso objetivo é garantir uma experiência única às mulheres que têm atitude e poder sobre suas decisões.
+        <b> Aos homens:</b> que tal experimentar a sensação de destaque a partir do desejo feminino?</p>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>FLERTAR ou SER FLERTADO(A)?</ion-card-header>
+        <ion-card-content>
+          <ion-item ion-item no-lines item-title item-bcg submenu text-left>
+            <ion-toggle [(ngModel)]="toggleStatusAtivo" (ionChange)="Change_Toggle_AtivoPasssivo(toggleStatusAtivo);" checked="false"></ion-toggle>
+            <ion-label>
+              Ser Buscado/Buscar
+              <a (click)="info(1)">
+                <ion-icon name="md-information-circle"></ion-icon>
+              </a>
+            </ion-label>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card *ngIf="toggleStatusAtivo">
+        <ion-card-header>
+          <ion-label>
+            Quem você deseja buscar?
+            <a (click)="info(2)">
+              <ion-icon name="md-information-circle"></ion-icon>
+            </a>
+          </ion-label>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-item ion-item no-lines item-title item-bcg submenu text-left>
+            <ion-toggle [(ngModel)]="toggleStatusH" (ionChange)="Change_Toggle_Homens(toggleStatusH);"></ion-toggle>
+            <ion-label>
+              Homens
+            </ion-label>
+          </ion-item>
+          <ion-item *ngIf="!btnMulher" ion-item no-lines item-title item-bcg submenu text-left>
+            <ion-toggle [disabled]="btnMulher" [(ngModel)]="toggleStatusM" (ionChange)="Change_Toggle_Mulheres(toggleStatusM);"></ion-toggle>
+            <ion-label>
+              Mulheres
+            </ion-label>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+      <ion-card *ngIf="!toggleStatusAtivo">
+        <ion-card-header>
+          <ion-label>
+            Por quem você deseja ser buscado?
+            <a (click)="info(2)">
+              <ion-icon name="md-information-circle"></ion-icon>
+            </a>
+          </ion-label>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-item ion-item no-lines item-title item-bcg submenu text-left>
+            <ion-toggle [(ngModel)]="toggleStatusHBuscado" (ionChange)="Change_Toggle_Homens_Buscado(toggleStatusHBuscado);"></ion-toggle>
+            <ion-label>
+              Homens
+            </ion-label>
+          </ion-item>
+          <ion-item ion-item no-lines item-title item-bcg submenu text-left>
+            <ion-toggle [(ngModel)]="toggleStatusMBuscado" (ionChange)="Change_Toggle_Mulheres_Buscado(toggleStatusMBuscado);"></ion-toggle>
+            <ion-label>
+              Mulheres
+            </ion-label>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+
+      <button ion-button large outline icon-end color="primary" (click)="irHome()">
+        Começar
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

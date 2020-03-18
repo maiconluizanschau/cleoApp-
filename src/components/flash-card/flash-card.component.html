@@ -1,0 +1,18 @@
+<ion-card class="card-stack" no-lines>
+    <div class="foto">
+        <img [src]="(user)?.photo">
+       
+        <h1 class="name">{{ (user)?.name }} {{ (user)?.sobrenome}},{{(user)?.idade}}</h1>
+   
+    </div>
+    <div class="sobre">
+        Sobre: {{ (user)?.sobre }}
+    </div>
+</ion-card>
+<ion-footer >
+    <div class="tinder-footer" no-lines>
+        <div id="swipe_dislike" class="rate" (click)="voteUp(false,user)"></div>
+        <div class="info" (click)="openChaSecret(user)"></div>
+        <div id="swipe_like" class="rate" (click)="voteUp(true,user)"></div>
+    </div>
+</ion-footer>

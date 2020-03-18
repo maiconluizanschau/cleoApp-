@@ -1,0 +1,87 @@
+page-perfil {
+
+  //perfil novo
+  ion-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 90px 1px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    }
+    //cor header botao
+  .toolbar-background {
+    background-color:#f8c300;
+    }
+  .content{
+      background:#f9f5e3;
+  }
+  
+        //nova ideia do perfil
+   // Cover image
+   #profile-bg {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    margin-top: -16px;
+    height: 160px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    
+  }
+  // Profile content
+  #content {
+    position: relative;
+    margin-top: 150px;
+    padding-top: 200px;
+    text-align: center;
+    
+  }
+  #profile-image {
+    display: block;
+    border-radius: 50%;
+    width: auto;
+    height: 100px;
+    margin: 0 auto 0;
+    //box-shadow: 0px 11px 20px -3px rgba(142, 136, 146, 0.75);
+    overflow: hidden;
+    box-shadow: 0.6px 0.6px 7px #AB09AA; 
+    /* sombra deslocada em 3px para baixo e 3px para direita, borrada em 5px e com cor cinza */
+    background-size: cover; 
+    /*ajusta a imagem dentro do div, mantendo a proporção da imagem */
+  }
+  #profile-info {
+    position: absolute;
+    top: -95px;
+    width: 100%;
+    z-index: 2;
+    text-align: center;
+    //background:#f9f5e3;
+    background:#f9f5e3;
+    
+  }
+  #profile-name {
+    color: #444;
+    font-size: 26px;
+    
+  }
+  .profile-description {
+    font-size: 15px;
+    //mudar cor padrao depois ver codigo photoshop
+   // color: #888;
+    background:#f9f5e3;
+    text-align: center;
+  }
+  
+  //deixar mais escuro
+  hr {
+    border: 0;
+    height: 1px;
+    background: #444;
+    background: -webkit-linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, rgb(188, 198, 214) 50%, hsla(0, 0%, 0%, 0) 100%);
+    
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "com.synconset.imagepicker": {
+      "PACKAGE_NAME": "br.com.cleo"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "br.com.cleo"
+    },
+    "cordova-plugin-console": {
+      "PACKAGE_NAME": "br.com.cleo"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "br.com.cleo"
+    },
+    "cordova-plugin-facebook4": {
+      "APP_ID": "1621635134795991",
+      "APP_NAME": "Star­t­u­p­Cleo",
+      "PACKAGE_NAME": "br.com.cleo"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "br.com.cleo"
+    },
+    "cordova-plugin-nativestorage": {
+      "PACKAGE_NAME": "br.com.cleo"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "br.com.cleo"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "br.com.cleo"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "br.com.cleo"
+    },
+    "ionic-plugin-keyboard": {
+      "PACKAGE_NAME": "br.com.cleo"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "PACKAGE_NAME": "br.com.cleo"
+    },
+    "phonegap-plugin-push": {
+      "FCM_VERSION": "11.0.1",
+      "PACKAGE_NAME": "br.com.cleo"
+    },
+    "cordova-plugin-local-notification": {
+      "PACKAGE_NAME": "br.com.cleo"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "br.com.cleoapp"
+    }
+  },
+  "dependent_plugins": {
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "br.com.cleo"
+    },
+    "cordova-plugin-badge": {
+      "PACKAGE_NAME": "br.com.cleo"
+    }
+  }
+}

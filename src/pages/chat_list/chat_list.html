@@ -1,0 +1,108 @@
+<ion-header>
+  <custom-logged-header [title]="view | capitalize:true"></custom-logged-header>
+  <ion-toolbar>
+    <ion-segment large color="light" [(ngModel)]="view">
+      <ion-segment-button value="secrets">
+        Conversas Secretas
+      </ion-segment-button>
+      <ion-segment-button value="flerts">
+        Meus Flerts
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar (ionInput)="filterItems($event)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid no-padding>
+    <ion-row [ngSwitch]="view">
+      <ion-col col-12>
+        <ion-list no-margin *ngSwitchCase="'secrets'">
+          <ion-item item-bcg *ngFor='let chat of meusChatsSecrets; let i = index;' (click)="openChaSecret(i,chat)">
+            <ion-avatar item-left  *ngIf="mostrar">
+              <img [src]="chat.photo || 'assets/images/no-photo.png'">
+            </ion-avatar>
+            <ion-avatar item-left *ngIf="!mostrar">
+              <img style="filter: blur(2px);" [src]="chat.photo || 'assets/images/no-photo.png'">
+            </ion-avatar>
+            <h2 item-title>{{ chat.name}}</h2>
+            <ion-icon icon-small item-right>
+              <i class="icon"></i>
+            </ion-icon>
+            <p *ngIf="chat.lastMessage; else customMessage">{{ chat.timestamp | date:'dd/MM/y H:mm' }} - {{ chat.lastMessage }}</p>
+               <!-- contorno vermelho que da para usar para mostrar quantidade de msg
+                    <div class="rating">
+                            <ion-icon icon="md-star"></ion-icon>
+                            
+                          </div>
+                          <button ion-button clear item-end>
+                            <span class="number-circle">5</span>
+                          </button>
+                        -->
+                        
+            <ng-template #customMessage>
+              <p>Sem Mensagens</p>
+              
+            </ng-template>
+          </ion-item>
+          <div *ngIf="meusChatsSecrets.length < 1">
+              <div class="row"> 
+                  <ion-col col-2></ion-col>
+                  <ion-col col-8>
+                      <ion-item >
+                          <img width="220"  src="assets/cleofundo.png" >   
+                      </ion-item>
+                      <ion-card-title  id="novoMatchAviso">
+                          Nenhum Match! 
+                      </ion-card-title>
+                  </ion-col>
+              </div>
+          </div>
+        </ion-list>
+        <ion-list no-margin *ngSwitchCase="'flerts'">
+          <ion-item item-bcg *ngFor="let chat of meusFlerts " (click)="onChatCreate(chat)">
+            <ion-avatar item-left>
+              <img [src]="chat.photo || 'assets/images/no-photo.jpg'">
+            </ion-avatar>
+            <h2 item-title>{{ chat.name }}&thinsp;{{ chat.sobrenome }}</h2>
+            <ion-icon icon-small item-right>
+              <i class="icon"></i>
+            </ion-icon>
+            <p *ngIf="chat.lastMessage; else customMessage">{{ chat.timestamp | date:'dd/MM/y H:mm' }} - {{ chat.lastMessage }}</p>
+            <ng-template #customMessage>
+              <p>Sem Mensagens</p>
+            </ng-template>
+          </ion-item>
+          <div *ngIf="meusFlerts.length < 1">
+              <div class="row"> 
+                  <ion-col col-2></ion-col>
+                  <ion-col col-8>
+                      <ion-item >
+                          <img width="220"  src="assets/cleofundo.png" >   
+                      </ion-item>
+                      <ion-card-title  id="novoMatchAviso">
+                          Nenhum Match! 
+                      </ion-card-title>
+                  </ion-col>
+              </div>
+          </div>
+        </ion-list>
+        <!--
+        <ion-list no-margin *ngSwitchCase="'flerts'">
+          <ion-item item-bcg *ngFor="let user of meusFlerts  " (click)="onChatCreate(user)">
+            <ion-avatar item-left>
+              <img [src]="user.photo || 'assets/images/no-photo.jpg'">
+            </ion-avatar>
+            <h2 item-title>
+              {{ user.name }}
+            </h2>
+          </ion-item>
+        </ion-list>-->
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+
